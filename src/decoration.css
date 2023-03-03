@@ -3,3 +3,6 @@ h1 {
   color: aliceblue;
   font-size: 20px;
 }
+div {
+  background-image: url("pic/background.jpg");
+}
