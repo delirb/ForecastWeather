@@ -4,20 +4,18 @@ h1 {
   font-size: 20px;
 }
 
-.Emoji,
-.todayWeather {
-  font-size: 55px;
+.Emoji {
+  font-size: 45px;
 }
-.todayWeather {
-  font-weight: bold;
-  display: inline-block;
+.today-Wether {
+  font-size: 45px !important;
   vertical-align: top;
-  line-height: 24px;
 }
 .Centi,
 .Fahrenheit {
-  font-size: 15px;
+  line-height: 24px;
   margin-top: 10px;
+  padding-left: 6px;
   vertical-align: top;
 }
 .low {
@@ -34,4 +32,15 @@ h1 {
   background-color: beige;
   margin-top: 20px;
   padding: 10px auto;
+}
+.emoji1,
+.emoji2,
+.emoji3,
+.emoji4,
+.emoji5,
+.emoji6 {
+  font-size: 30px;
+}
+.search {
+  margin-left: 40px;
 }
