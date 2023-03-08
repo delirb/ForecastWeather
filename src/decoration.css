@@ -3,6 +3,35 @@ h1 {
   color: aliceblue;
   font-size: 20px;
 }
-div {
-  background-image: url("pic/background.jpg");
+
+.Emoji,
+.todayWeather {
+  font-size: 55px;
+}
+.todayWeather {
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 24px;
+}
+.Centi,
+.Fahrenheit {
+  font-size: 15px;
+  margin-top: 10px;
+  vertical-align: top;
+}
+.low {
+  color: grey;
+}
+.form-control,
+.btn-primary {
+  margin: 10px;
+}
+.container {
+  border: 2px solid rgb(140, 138, 144);
+  border-radius: 5px;
+  box-shadow: dimgray;
+  background-color: beige;
+  margin-top: 20px;
+  padding: 10px auto;
 }
