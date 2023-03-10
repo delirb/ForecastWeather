@@ -4,12 +4,6 @@ h1 {
   font-size: 20px;
 }
 
-.Emoji {
-  font-size: 45px;
-  height: 60px;
-  width: 60px;
-  margin-right: 10px;
-}
 .today-Wether {
   font-size: 50px !important;
   vertical-align: top;
@@ -31,6 +25,8 @@ h1 {
 .btn-primary {
   margin: 10px;
 }
+.info:first-letter {
+}
 .container {
   display: block;
   border: 2px solid #3a98b9;
@@ -38,6 +34,7 @@ h1 {
   box-shadow: #bface2;
   background-color: #fff1dc;
   margin: 20px auto;
+  margin-bottom: 2px;
   padding: 20px auto;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   max-width: 800px;
@@ -85,4 +82,15 @@ body {
 img {
   display: block;
   margin: 0 auto;
+
+  padding: 0 auto;
+}
+.weather-temperature img {
+  margin-right: 5px;
+  margin-left: 0;
+  height: 64px;
+  width: 64px;
+}
+.float-left {
+  float: left !important;
 }

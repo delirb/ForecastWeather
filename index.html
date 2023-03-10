@@ -29,7 +29,7 @@
               type="name"
               class="form-control"
               id="exampleInputEmail1"
-              placeholder="Enter city"
+              placeholder="Enter a city"
               aria-describedby="cityHelp"
             />
           </div>
@@ -47,10 +47,19 @@
       <br />
       <div class="row align-items-center">
         <div class="col-3">
-          <span class="Emoji">🌦️</span>
-          <span class="today-Wether" id="todayWeather"> 8 </span>
-          <span class="Centi"> °C </span>
-          <a href="#" class="Fahrenheit"> |°F </a>
+          <div class="clearfix weather-temperature">
+            <img
+              src="https://openweathermap.org/img/wn/03d@2x.png"
+              alt="Clear"
+              id="icon"
+              class="float-left"
+            />
+            <span class="float-left">
+              <strong class="today-Wether" id="todayWeather"> 8 </strong>
+              <span class="Centi"> °C</span>
+              <a href="#" class="Fahrenheit"> |°F </a>
+            </span>
+          </div>
         </div>
         <div class="col-4">
           precipitation:<span class="precipitation" id="precipitation">
@@ -65,7 +74,7 @@
           <span class="wind" id="wind"> 11 </span> km/h
           <br />
         </div>
-        <div class="col-4">
+        <div class="col-4 info">
           <div class="city" id="cityname"><strong> Esfahan </strong></div>
           <div id="date">Wednesday 21:00</div>
           <div class="description" id="description">
