@@ -10,6 +10,7 @@ h1 {
 .today-Wether {
   font-size: 45px !important;
   vertical-align: top;
+  font-weight: 100;
 }
 .Centi,
 .Fahrenheit {
@@ -18,6 +19,7 @@ h1 {
   padding-left: 6px;
   vertical-align: top;
 }
+
 .low {
   color: grey;
 }
@@ -27,12 +29,14 @@ h1 {
 }
 .container {
   display: block;
-  border: 2px solid #3e54ac;
-  border-radius: 5px;
+  border: 2px solid #3a98b9;
+  border-radius: 8px;
   box-shadow: #bface2;
-  background-color: #ecf2ff;
-  margin-top: 20px;
-  padding: 10px auto;
+  background-color: #fff1dc;
+  margin: 20px auto;
+  padding: 20px auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  max-width: 800px;
 }
 .emoji1,
 .emoji2,
@@ -47,15 +51,32 @@ h1 {
 }
 .btn {
   color: #030304;
-  background-color: #bface2;
+  background-color: #3a98b9;
+  border: #3a98b9;
 }
-button:hover {
-  color: #655dbb;
-}
+
 .form-control {
-  background-color: #bface2;
+  background-color: #3a98b9;
   opacity: 0.2;
 }
 .city {
-  font-size: 30px;
+  font-size: 24px;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+p {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+}
+body {
+  background-color: #eeeeee;
+}
+.humidity,
+.wind {
+  color: #c04a82;
+}
+img {
+  display: block;
+  margin: 0 auto;
 }
