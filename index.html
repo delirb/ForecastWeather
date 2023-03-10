@@ -15,7 +15,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/decoration.css" />
 
     <title>Weather Forecast</title>
@@ -48,29 +48,29 @@
       <div class="row align-items-center">
         <div class="col-3">
           <span class="Emoji">🌦️</span>
-          <span class="today-Wether"> 8 </span>
+          <span class="today-Wether" id="todayWeather"> 8 </span>
           <span class="Centi"> °C </span>
           <a href="#" class="Fahrenheit"> |°F </a>
         </div>
         <div class="col-4">
-          precipitation:<span class="precipitation"> 1% </span>
+          precipitation:<span class="precipitation" id="precipitation">
+            1
+          </span>
+          %
           <br />
           Humidity:
-          <span class="humidity"> 73% </span>
+          <span class="humidity" id="humidity"> 73 </span> %
           <br />
           Wind:
-          <span class="wind"> 11 km/h </span>
+          <span class="wind" id="wind"> 11 </span> km/h
           <br />
         </div>
         <div class="col-4">
-          <span class="city"> <strong> Isfahan </strong></span>
-          <span class="time"> 21:00 </span>
-          <br />
-
-          <span class="date"> Wednesday </span>
-
-          <br />
-          <span class="description"> Clear with periodic clouds </span>
+          <div class="city" id="cityname"><strong> Esfahan </strong></div>
+          <div id="date">Wednesday 21:00</div>
+          <div class="description" id="description">
+            Clear with periodic clouds
+          </div>
         </div>
       </div>
       <br />
