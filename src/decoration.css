@@ -26,10 +26,11 @@ h1 {
   margin: 10px;
 }
 .container {
-  border: 2px solid rgb(140, 138, 144);
+  display: block;
+  border: 2px solid #3e54ac;
   border-radius: 5px;
-  box-shadow: dimgray;
-  background-color: beige;
+  box-shadow: #bface2;
+  background-color: #ecf2ff;
   margin-top: 20px;
   padding: 10px auto;
 }
@@ -43,4 +44,18 @@ h1 {
 }
 .search {
   margin-left: 40px;
+}
+.btn {
+  color: #030304;
+  background-color: #bface2;
+}
+button:hover {
+  color: #655dbb;
+}
+.form-control {
+  background-color: #bface2;
+  opacity: 0.2;
+}
+.city {
+  font-size: 30px;
 }
