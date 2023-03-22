@@ -22,13 +22,13 @@
   </head>
   <body>
     <div class="container">
-      <form class="search">
+      <form class="search" id="searchForm">
         <div class="row align-items-start">
           <div class="col-9">
             <input
               type="name"
               class="form-control"
-              id="exampleInputEmail1"
+              id="inputCity"
               placeholder="Enter a city"
               aria-describedby="cityHelp"
             />
@@ -56,8 +56,8 @@
             />
             <span class="float-left">
               <strong class="today-Wether" id="todayWeather"> 8 </strong>
-              <span class="Centi"> °C</span>
-              <a href="#" class="Fahrenheit"> |°F </a>
+              <a href="#" class="active" id="celcius-link"> °C</a>
+              <a href="#" id="Fahrenheit-link"> |°F </a>
             </span>
           </div>
         </div>

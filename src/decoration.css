@@ -94,3 +94,12 @@ img {
 .float-left {
   float: left !important;
 }
+
+.weather-temperature .active {
+  text-decoration: none;
+  color: #030304;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}

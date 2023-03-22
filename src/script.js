@@ -35,6 +35,8 @@ function displayWeatherCondition(response) {
     response.data.main.temp
   );
 
+  exactTemp = response.data.main.temp;
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -53,9 +55,43 @@ function displayWeatherCondition(response) {
     );
   document
     .querySelector("#icon")
-    .setAttribute("alt", `  ${response.data.weather[0].description}`);
+    .setAttribute("alt", `${response.data.weather[0].description}`);
 }
-let city = "sydney";
-let Appkey = "984f5a7c489eb91ea3f8c3eb812a5080";
-let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Appkey}&units=metric`;
-axios.get(weatherUrl).then(displayWeatherCondition);
+
+function searchCity(city) {
+  let Appkey = "984f5a7c489eb91ea3f8c3eb812a5080";
+  let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Appkey}&units=metric`;
+  axios.get(weatherUrl).then(displayWeatherCondition);
+}
+
+function getInfo(event) {
+  event.preventDefault();
+  let city = document.querySelector("#inputCity");
+  console.log(city);
+
+  searchCity(city.value);
+}
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", getInfo);
+
+let exactTemp = null;
+
+function changeTempF(event) {
+  event.preventDefault();
+  let FahrehhietValue = Math.round((exactTemp * 9) / 5 + 32);
+  changeTocelcius.classList.remove("active");
+  changeToFahrenhiet.classList.add("active");
+  document.querySelector("#todayWeather").innerHTML = FahrehhietValue;
+}
+function changeTempC(event) {
+  event.preventDefault();
+  document.querySelector("#todayWeather").innerHTML = Math.round(exactTemp);
+  changeTocelcius.classList.add("active");
+  changeToFahrenhiet.classList.remove("active");
+}
+
+let changeToFahrenhiet = document.querySelector("#Fahrenheit-link");
+changeToFahrenhiet.addEventListener("click", changeTempF);
+
+let changeTocelcius = document.querySelector("#celcius-link");
+changeTocelcius.addEventListener("click", changeTempC);
