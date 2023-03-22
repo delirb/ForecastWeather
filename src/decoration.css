@@ -32,7 +32,7 @@ h1 {
   border: 2px solid #3a98b9;
   border-radius: 8px;
   box-shadow: #bface2;
-  background-color: #fff1dc;
+  background-color: #f9f5eb;
   margin: 20px auto;
   margin-bottom: 2px;
   padding: 20px auto;
@@ -58,7 +58,8 @@ h1 {
 }
 
 .form-control {
-  background-color: #3a98b9;
+  background-color: #3a98b9 !important;
+  text-decoration-color: #030304;
   opacity: 0.2;
 }
 .city {

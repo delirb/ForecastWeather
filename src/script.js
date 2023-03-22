@@ -74,7 +74,7 @@ function getInfo(event) {
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", getInfo);
 
-let exactTemp = null;
+let exactTemp = 11;
 
 function changeTempF(event) {
   event.preventDefault();
