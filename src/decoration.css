@@ -40,6 +40,9 @@ h1 {
   max-width: 800px;
   text-transform: capitalize;
 }
+.forecast {
+  text-align: center;
+}
 .emoji1,
 .emoji2,
 .emoji3,
