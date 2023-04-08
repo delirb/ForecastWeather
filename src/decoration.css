@@ -107,3 +107,6 @@ img {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+.min-tempreture {
+  color: grey;
+}
