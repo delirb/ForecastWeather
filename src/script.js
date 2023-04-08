@@ -120,7 +120,7 @@ function searchCity(city) {
 
 function getInfo(event) {
   event.preventDefault();
-  let city = document.querySelector("#cityname");
+  let city = document.querySelector("#inputCity");
   console.log(city);
 
   searchCity(city.value);
