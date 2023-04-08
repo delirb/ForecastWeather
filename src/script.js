@@ -26,8 +26,11 @@ function formatDate(dateinfo) {
 
   return `${day} ${hours}:${minutes}`;
 }
-function displayForecast() {
+
+function displayForecast(response) {
+  console.log(response.data);
   let forecast = document.querySelector("#forecastdays");
+
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
 
   let forecastHTML = `<div class="row">`;
@@ -52,11 +55,18 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+}
+
+function getForecast(coordination) {
+  let apiKey = "4b44333bbcda5f0o6aaf4bt96ce9c0cd";
+  let apiForUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordination.lon}&lat=${coordination.lat}&key=${apiKey}&units=metric`;
+
+  //let apiForUrl = `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${Appkey}&units=metric`;
+  console.log(apiForUrl);
+  axios.get(apiForUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
-  console.log(response.data);
   document.querySelector("#cityname").innerHTML = response.data.name;
 
   document.querySelector("#todayWeather").innerHTML = Math.round(
@@ -84,12 +94,16 @@ function displayWeatherCondition(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", `${response.data.weather[0].description}`);
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
   let Appkey = "984f5a7c489eb91ea3f8c3eb812a5080";
   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Appkey}&units=metric`;
+  //let apiForUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${Appkey}&units=metric`;
   axios.get(weatherUrl).then(displayWeatherCondition);
+  //console.log(apiForUrl);
+  //axios.get(apiForUrl).then(displayForecast);
 }
 
 function getInfo(event) {
@@ -123,4 +137,3 @@ changeToFahrenhiet.addEventListener("click", changeTempF);
 
 let changeTocelcius = document.querySelector("#celcius-link");
 changeTocelcius.addEventListener("click", changeTempC);
-displayForecast();
