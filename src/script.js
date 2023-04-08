@@ -29,7 +29,7 @@ function formatDate(dateinfo) {
 function formatDay(timeDt) {
   let date = new Date(timeDt * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
@@ -37,8 +37,6 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   console.log(response);
   let forecastElement = document.querySelector("#forecastdays");
-
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
@@ -115,7 +113,6 @@ function displayWeatherCondition(response) {
 function searchCity(city) {
   let Appkey = "984f5a7c489eb91ea3f8c3eb812a5080";
   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Appkey}&units=metric`;
-  //let apiForUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${Appkey}&units=metric`;
   axios.get(weatherUrl).then(displayWeatherCondition);
   //console.log(apiForUrl);
   //axios.get(apiForUrl).then(displayForecast);
@@ -123,7 +120,7 @@ function searchCity(city) {
 
 function getInfo(event) {
   event.preventDefault();
-  let city = document.querySelector("#inputCity");
+  let city = document.querySelector("#cityname");
   console.log(city);
 
   searchCity(city.value);

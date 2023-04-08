@@ -56,14 +56,13 @@ h1 {
 }
 .btn {
   color: #030304;
-  background-color: #3a98b9;
+  background-color: beige;
   border: #3a98b9;
 }
 
 .form-control {
-  background-color: #3a98b9 !important;
+  background-color: #d6dbdc !important;
   text-decoration-color: #030304;
-  opacity: 0.2;
 }
 .city {
   font-size: 24px;
